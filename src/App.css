@@ -1,0 +1,110 @@
+#root {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #414141;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input-field {
+  padding: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  align-self: center;
+}
+.input-field-button {
+  padding: 8px 15px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+.input-and-button-flex {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-field-suggestions {
+  width: 11vw;
+  background-color: white;
+  position: absolute;
+  padding: 0;
+  margin-top: 55px;
+  margin-right: 100px;
+  border: 1px solid black;
+  list-style: none;
+  padding: "5px";
+  width: "200px";
+  background: "white";
+  position: "absolute";
+  text-align: center;
+  z-index: 10;
+}
+
+.time-zone-container {
+  background-color: rgb(247, 247, 247);
+  margin: 0 auto;
+  padding: 0vh 1vw;
+  width: 30vw;
+}
+
+.time-zone-card {
+  border-bottom: 1px solid rgb(169, 169, 169);
+  padding: 2vh 0vw;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.city-and-day {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.time-container {
+  letter-spacing: 1px;
+}
