@@ -3,11 +3,14 @@ import Clock from "./analog-clock/AnalogClock";
 
 type TimeZoneProps = {
   timezone: string;
-  city?: string;
+  city: string;
   format24Hour?: boolean;
+  favorite: boolean;
+  onToggleFavorite: (city: string) => void;
 };
 
-export function TimeZone({ timezone, city, format24Hour = true }: TimeZoneProps) {
+export function TimeZone({ timezone, city, format24Hour = true,  favorite,
+  onToggleFavorite, }: TimeZoneProps) {
   const [day, setDay] = useState("");
   const [time, setTime] = useState("");
   const [showAnalog, setShowAnalog] = useState(false); // toggle state
@@ -71,7 +74,25 @@ export function TimeZone({ timezone, city, format24Hour = true }: TimeZoneProps)
         >
           {showAnalog ? "Show Digital" : "Show Analog"}
         </button>
+
+<button
+  onClick={() => onToggleFavorite(city)}
+  style={{
+    marginTop: "10px",
+    padding: "6px 12px",
+    fontSize: "14px",
+    cursor: "pointer",
+    backgroundColor: favorite ? "gold" : "lightgray",
+    border: "none",
+    borderRadius: "8px",
+  }}
+>
+  {favorite ? "★ Favorite" : "☆ Add Favorite"}
+</button>
+
+
       </section>
+      
     </section>
   );
 }
