@@ -1,15 +1,15 @@
 
-import TimeZone from "./TimeZone"; 
+// import TimeZone from "./TimeZone"; 
 
 
 function TimeAndCity()  {
 
   return (
     <>
-   <section className="time-zone-container">
+   {/* <section className="time-zone-container">
       <TimeZone timezone="Asia/Tokyo" city="Tokyo" />
         <TimeZone timezone="Europe/London" city="London" />
-        </section>
+        </section> */}
 
     </>
   );

@@ -49,6 +49,21 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
   return (
     <section className="time-zone-container">
       <section className="time-zone-card">
+        <button
+  onClick={() => onToggleFavorite(city)}
+  style={{
+    marginTop: "10px",
+    padding: "6px 12px",
+    fontSize: "18px",
+    cursor: "pointer",
+    backgroundColor: favorite ? "gold" : "lightgray",
+    border: "none",
+    borderRadius: "8px",
+  }}
+>
+  {favorite ? "★" : "☆"}
+</button>
+
         <article className="city-and-day">
           <h2>{city}</h2>
           <p>{day}</p>
@@ -75,20 +90,6 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
           {showAnalog ? "Show Digital" : "Show Analog"}
         </button>
 
-<button
-  onClick={() => onToggleFavorite(city)}
-  style={{
-    marginTop: "10px",
-    padding: "6px 12px",
-    fontSize: "14px",
-    cursor: "pointer",
-    backgroundColor: favorite ? "gold" : "lightgray",
-    border: "none",
-    borderRadius: "8px",
-  }}
->
-  {favorite ? "★ Favorite" : "☆ Add Favorite"}
-</button>
 
 
       </section>
