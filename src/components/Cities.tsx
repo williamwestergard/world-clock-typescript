@@ -72,7 +72,6 @@ const cityToTimezone: Record<string, string> = {
 
   // Africa
   johannesburg: "Africa/Johannesburg",
-  capeTown: "Africa/Johannesburg",
   cairo: "Africa/Cairo",
   lagos: "Africa/Lagos",
   nairobi: "Africa/Nairobi",

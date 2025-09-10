@@ -24,14 +24,14 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
         hour12: !format24Hour,
         hour: "2-digit",
         minute: "2-digit",
-        second: "2-digit",
+        // second: "2-digit",
       }).format(now);
 
       setTime(formattedTime);
 
       const formattedDay = new Intl.DateTimeFormat("en-US", {
         timeZone: timezone,
-        weekday: "long",
+        weekday: "short",
         year: "numeric",
         month: "short",
         day: "numeric",
@@ -47,22 +47,12 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
   }, [timezone, format24Hour]);
 
   return (
+   <>
+
+      <section className="time-card-container">
     <section className="time-zone-container">
       <section className="time-zone-card">
-        <button
-  onClick={() => onToggleFavorite(city)}
-  style={{
-    marginTop: "10px",
-    padding: "6px 12px",
-    fontSize: "18px",
-    cursor: "pointer",
-    backgroundColor: favorite ? "gold" : "lightgray",
-    border: "none",
-    borderRadius: "8px",
-  }}
->
-  {favorite ? "★" : "☆"}
-</button>
+
 
         <article className="city-and-day">
           <h2>{city}</h2>
@@ -73,11 +63,16 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
           {showAnalog ? (
             <Clock timezone={timezone} />
           ) : (
-            <h1>{time}</h1>
+           <h2>{time}</h2>
           )}
+                  <button className="favorite-button"
+  onClick={() => onToggleFavorite(city)}
+  style={{ backgroundColor: favorite ? "gold" : "lightgray"}}>
+  {favorite ? "★" : "☆"}
+</button>
         </article>
 
-        {/* Toggle Button */}
+  
         <button
           onClick={() => setShowAnalog((prev) => !prev)}
           style={{
@@ -93,8 +88,9 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
 
 
       </section>
-      
+      </section>
     </section>
+    </>
   );
 }
 

@@ -1,26 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
-import CityClock from "./components/ChooseCity";
+import Navbar from "./components/Navbar"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StartPage from "./pages/StartPage";
+import TimeAndCity from "./components/ChooseCity";
 import CityPage from "./pages/CityPage";
-import TimeList from "./components/TimeList";
+import FavoritesPage from "./pages/FavoritesPage"
 
-
-const App: React.FC = () => {
+function App() {
   return (
-    <> <CityClock   />
-         <TimeList />
-    <Router basename="/world-clock-typescript">
+    <Router basename="/world-clock-typescript/">
+      <Navbar />
       <Routes>
         <Route path="/" element={<StartPage />} />
+         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/city-page" element={<CityPage />} />
+        <Route path="/city/:cityName" element={<CityPage />} />
+        <Route path="*" element={<TimeAndCity />} /> 
       </Routes>
     </Router>
-    </>
   );
-};
+}
 
-export default App
-
-
+export default App;
