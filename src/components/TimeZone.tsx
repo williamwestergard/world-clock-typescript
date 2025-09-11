@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // 👈 import Link
 import Clock from "./analog-clock/AnalogClock";
 
 type TimeZoneProps = {
@@ -13,7 +14,7 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
   onToggleFavorite, }: TimeZoneProps) {
   const [day, setDay] = useState("");
   const [time, setTime] = useState("");
-  const [showAnalog, setShowAnalog] = useState(false); // toggle state
+  const [showAnalog] = useState(false); // toggle state
 
   useEffect(() => {
     const updateTime = () => {
@@ -55,7 +56,9 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
 
 
         <article className="city-and-day">
-          <h2>{city}</h2>
+           <Link to={`/city/${encodeURIComponent(city)}`} >
+                {city}
+              </Link>
           <p>{day}</p>
         </article>
 
@@ -72,7 +75,7 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
 </button>
         </article>
 
-  
+{/*   
         <button
           onClick={() => setShowAnalog((prev) => !prev)}
           style={{
@@ -84,7 +87,7 @@ export function TimeZone({ timezone, city, format24Hour = true,  favorite,
         >
           {showAnalog ? "Show Digital" : "Show Analog"}
         </button>
-
+ */}
 
 
       </section>

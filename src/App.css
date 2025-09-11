@@ -11,12 +11,13 @@ html {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: rgb(221, 220, 220);
+  background-color: rgb(218, 222, 225);
 }
 
 body {
   margin: 0;
-  background-color: rgb(72, 72, 72);
+  background-color: rgb(43, 44, 46);
+  margin-top: 3vh;
 }
 
 button {
@@ -114,6 +115,12 @@ p {
   padding: 0;
 }
 
+.city-and-day a {
+  color: rgb(0, 39, 195);
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .time-zone-card p {
   margin-top: -1px;
 }
@@ -141,12 +148,13 @@ p {
 
 .navbar-container {
   background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.385);
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   width: 95%;
   align-items: center;
-  padding: 0.7vh 3vh;
+  padding: 0.8vh 3vh;
   margin: 0 auto;
   margin-bottom: 4vh;
   position: relative;
@@ -177,12 +185,12 @@ p {
   right: 4vw;
 }
 .nav-links a {
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 600;
 }
 
 .time-list-header {
-  background-color: rgb(62, 61, 61);
+  background-color: rgb(60, 62, 67);
   width: 75.5%;
   margin: 0 auto;
   color: white;
@@ -198,4 +206,48 @@ p {
   float: left;
   margin-top: 9px;
   font-size: 18px;
+}
+.city-card {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.city-card-title {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.city-card-date {
+  font-size: 1rem;
+  color: gray;
+}
+
+.city-card-time {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+.city-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+
+  width: 50%;
+  gap: 1rem;
+  height: 19vh;
+}
+
+.city-card-fav,
+.city-card-toggle {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
