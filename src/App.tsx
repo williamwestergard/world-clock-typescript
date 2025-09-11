@@ -5,11 +5,13 @@ import StartPage from "./pages/StartPage";
 import TimeAndCity from "./components/ChooseCity";
 import CityPage from "./pages/CityPage";
 import FavoritesPage from "./pages/FavoritesPage"
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <Router basename="/world-clock-typescript/">
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<StartPage />} />
          <Route path="/favorites" element={<FavoritesPage />} />
@@ -17,7 +19,9 @@ function App() {
         <Route path="/city/:cityName" element={<CityPage />} />
         <Route path="*" element={<TimeAndCity />} /> 
       </Routes>
+       <Footer />
     </Router>
+   
   );
 }
 
