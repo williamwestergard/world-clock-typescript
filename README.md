@@ -5,7 +5,7 @@ Jag ville att hemsidans syfte skulle bli uppenbart så fort användaren såg sid
 Därför tänkte jag att populära staders tider skulle vara framhävt på förstasidan, tillsammans med
 en sök funktion och favoritlista. (Se bild 1)
 
-!(./src/assets/skiss.jpg)
+![Skiss](./src/assets/skiss.jpg)
 
 Jag delade upp komponenterna i funktioner. Exempelvis navbar, footer, Cities och sökfunktion.
 Tanken var sedan att inte låta en komponent bli för komplex med funktioner som kunde brytas ner till mindre komponenter.
